@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roda de Avaliação da Ansiedade</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="octocat.css">
+  <link rel="stylesheet" href="inputRangeStyle.css">
+</head>
+
+<body>
+
+
+  <div id="container">
+    <div id="chart"></div>
+    <div id="categories"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="wheelOfLife.js"></script>
+  <script>
+    const defaultConfig = [
+      {
+        name: 'Lazer',
+        color: '#3DB549',
+        description: 'Quanto você tem um tempo se entregando de livre vontade, seja para repousar, seja para divertir-se, recrear-se e entreter-se fazendo um simples passeio na natureza, tirando o foco da sua rotina, tendo um hobbies, ficando um tempo ócio?',
+      },
+      {
+        name: 'Presença',
+        color: '#2289B4',
+        description: 'A nossa mente ou ela está trazendo lembranças do passado ou trazendo novos pensamentos para o futuro, só que focar a mente no passado vai trazer depressão e focar a mente no futuro vai te trazer ansiedade, quanto você consegue ficar no agora, ter presença no momento presente, em pequenas atividades diárias , como tomar banho, estar com a família, lavar a louça, quanto dessas atividades você consegue estar presente.',
+      },
+      {
+        name: 'Mente saudável',
+        color: '#F79321',
+        description: 'Sua mente tem te enlouquecido com pensamentos negativos diários, e quase sempre tem pensamentos negativos, como medo de morte, sente que algo de ruim vai acontecer, às vezes eles ficam sem controle algum e quanto mais você quer que eles saiam , mais eles ficam dentro da sua cabeça, fazendo com que você não durma e não consiga fazer suas tarefa simples do dia a dia?',
+      },
+      {
+        name: 'Exercício físico',
+        color: '#94AFDC',
+        description: 'O seu corpo foi feito para estar em movimento , e o que você tem feito com ele, tem usado somente para trabalhar, dormir e ficar assistindo séries ? Tem praticado exercícios físicos pelo menos 15 minutos por dia? Tem transformado seu corpo em em um tanque de guerra ou ele está sempre com preguiça cansado e doente?',
+      },
+      {
+        name: 'Respiração',
+        color: '#FF5F75',
+        description: 'A pessoa ansiosa tem uma respiração rápida e curta, você tem treinado  para respirar mais lento e tranquilo para oxigenar melhor o seu cérebro? Faz pausas durante o dia para fazer uma respiração correta que puxa o ar total dos pulmões e não do peito?',
+      },
+      {
+        name: 'Sono',
+        color: '#00ADEF',
+        description: 'Você tem o hábito de dormir de 7 a 8 horas de sono? E quando deita, acorda descansado? Na maioria das vezes na sua rotina você tem hora para deitar e acordar ? Não precisa tomar comprimidos para dormir? Tem uma alimentação que ajuda no sono?',
+      },
+      {
+        name: 'Espiritual',
+        color: '#935FA7',
+        description: 'Como está sua conexão com Deus? O que você tem feito para sentir mais o amor dele, viver experiências reais com ele? Tem uma rotina de oração, para pedir e agradecer? Mais do que isso, você consegue ouvir suas respostas quando você pergunta? Busca direção em tudo na sua vida? Você estuda sua palavra?',
+      },
+
+      {
+        name: 'Alimentação',
+        color: '#fada2f',
+        description: 'Você é o que você come, frase muito poderosa e verdadeira, o que você tem colocado para dentro do seu corpo? Fast food, comidas gordurosas, inúmeros doces, Ou tem feito uma alimentação que ajuda seu corpo ser mais produtivos durante o dia, verduras legumes, lactobacilos{ kefir} alimentos que ajudam seu corpo a ter mais saúde e ter vida longa.',
+      },
+
+      {
+        name: 'Meditação',
+        color: '#ED2527',
+        description: 'A meditação descansa a mente da rotina louca em que vivemos , você passa quanto  tempo por dia fazendo uma meditação guiada, ou somente focando a mente na sua respiração? Não tem meditação certa ou errada tem aquela que você se identifica melhor e aplica todos os dias para acalmar a sua mente.',
+      },
+    ];
+    WheelOfLife.setup(document.getElementById("chart"), document.getElementById("categories"), defaultConfig);
+  </script>
+</body>
+
+</html>
